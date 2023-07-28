@@ -7,6 +7,8 @@ const PORT = 8009;
 require('dotenv').config();
 
 const emailRoute = require('./routes/email');
+const email  = require('./controllers/email');
+app.use('/test/api/email', email);
 app.use('/email', emailRoute);
 app.use(cors())
 app.use(express.json());
